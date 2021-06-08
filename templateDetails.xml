@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>pianino_new</name>
+	<files>
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>favicon.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+        <position>block-serts</position>
+        <position>block-parthners</position>
+        <position>block-entry</position>
+		<position>top-valute</position>
+		<position>top-menu</position>
+        <position>top-valutes</position>
+        <position>top-phones</position>
+        <position>top-basket</position>
+        <position>left-menu</position>
+        <position>left-menu-home</position>
+        <position>left-filter</position>
+        <position>shopping-top</position>
+        <position>top-slider</position>
+        <position>blocks-5</position>
+        <position>free-attr-items</position>
+        <position>label-products</position>
+        <position>last-news</position>
+        <position>video-review</position>
+        <position>block-consult</position>
+        <position>block-last-look</position>
+        <position>block-footer-podpis</position>
+        <position>block-footer-menu</position>
+        <position>after-search-panel</position>
+        <position>brands</position>
+        <position>in-categories</position>
+        <position>block-footer-info</position>
+        <position>block-footer-social</position>
+        <position>reviews_all</position>
+        <position>dop-news</position>
+		<position>block-3d</position>
+        <position>new-banner</position>
+        <position>new-banner-products</position>
+	</positions>
+</extension>
