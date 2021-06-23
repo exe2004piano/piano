@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<renderer>
+	<positions layout="full">
+		<position name="title">Title</position>
+		<position name="fulltext">Fulltext</position>
+		<position name="comments">Comments</position>
+	</positions>
+	<positions layout="teaser">
+		<position name="date">Date</position>
+		<position name="title">Title</position>
+		<position name="introtext">Content</position>
+		<position name="readmore">Readmore</position>
+	</positions>
+</renderer>

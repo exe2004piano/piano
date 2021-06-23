@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_top_phones</name>
+	<files>
+		<filename module="mod_z_top_phones">mod_z_top_phones.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="main_phone"
+					type="text"
+					label="main phone"
+					description="main phone"
+				/>
+
+				<field
+					name="all_phones"
+					type="textarea"
+					label="Phones"
+					description="1-MTS, 2-LIFE, 3-VEL, 4-BELTELECOM"
+                    rows = "10"
+                    cols = "70"
+				/>
+
+				<field
+					name="skype"
+					type="textarea"
+					label="Messenger"
+					description="1-WhatsApp, 2-Viber, 3-Skype"
+                    rows = "10"
+                    cols = "70"
+				/>
+
+
+                <field
+                        name="main_phone_ru"
+                        type="text"
+                        label="main phone ru"
+                        description="main phone ru"
+                        />
+
+                <field
+                        name="all_phones_ru"
+                        type="textarea"
+                        label="Phones ru"
+                        description="1-MTS, 2-LIFE, 3-VEL, 4-BELTELECOM"
+                        rows = "10"
+                        cols = "70"
+                        />
+
+                <field
+                        name="skype_ru"
+                        type="textarea"
+                        label="Messenger ru"
+                        description="1-WhatsApp, 2-Viber, 3-Skype"
+                        rows = "10"
+                        cols = "70"
+                        />
+
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

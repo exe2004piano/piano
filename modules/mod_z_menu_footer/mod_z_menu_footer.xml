@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_menu_footer</name>
+
+	<files>
+		<filename module="mod_z_menu_footer">mod_z_menu_footer.php</filename>
+	</files>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="menutype"
+					type="menu"
+					label="MOD_MENU_FIELD_MENUTYPE_LABEL"
+					description="MOD_MENU_FIELD_MENUTYPE_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

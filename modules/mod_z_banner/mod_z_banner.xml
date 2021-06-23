@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_banner</name>
+	<files>
+		<filename module="mod_z_banner">mod_z_banner.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="title"
+					type="text"
+					/>
+
+				<field
+					name="content"
+					type="editor"
+					/>
+
+				<field
+					name="button"
+					type="text"
+					/>
+
+                <field
+                        name="link"
+                        type="text"
+                        />
+
+				<field
+					name="image"
+					type="media"
+					/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

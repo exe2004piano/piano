@@ -24,9 +24,6 @@
 #   this version ignores all files by default
 # -----------------------------------------------------------------
 
-# ignore everything in the root except the "wp-content" directory.
-/*
-
 # ignore all files starting with . or ~
 .*
 ~*

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_categories</name>
+
+	<files>
+		<filename module="mod_z_categories">mod_z_categories.php</filename>
+	</files>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CUSTOM_HTML" />
+	<config>
+		<fields name="params">
+
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+                <field
+                        name="cat_1_title"
+                        type="text"
+                        label="Название раздела"
+                        description="Название раздела"
+                        default=""
+                        />
+
+                <field
+                        name="cat_1_img"
+                        type="media"
+                        label="Фото раздела"
+                        description="Фото раздела"
+                        />
+
+                <field
+                        name="cat_1_ids"
+                        type="text"
+                        label="ID категорий"
+                        description="ID категорий"
+                        default=""
+                        />
+
+
+
+
+                <field
+                        name="cat_2_title"
+                        type="text"
+                        label="Название раздела"
+                        description="Название раздела"
+                        default=""
+                        />
+
+                <field
+                        name="cat_2_img"
+                        type="media"
+                        label="Фото раздела"
+                        description="Фото раздела"
+                        />
+
+                <field
+                        name="cat_2_ids"
+                        type="text"
+                        label="ID категорий"
+                        description="ID категорий"
+                        default=""
+                        />
+
+
+                <field
+                        name="cat_3_title"
+                        type="text"
+                        label="Название раздела"
+                        description="Название раздела"
+                        default=""
+                        />
+
+                <field
+                        name="cat_3_img"
+                        type="media"
+                        label="Фото раздела"
+                        description="Фото раздела"
+                        />
+
+                <field
+                        name="cat_3_ids"
+                        type="text"
+                        label="ID категорий"
+                        description="ID категорий"
+                        default=""
+                        />
+
+
+
+                <field
+                        name="cat_4_title"
+                        type="text"
+                        label="Название раздела"
+                        description="Название раздела"
+                        default=""
+                        />
+
+                <field
+                        name="cat_4_img"
+                        type="media"
+                        label="Фото раздела"
+                        description="Фото раздела"
+                        />
+
+                <field
+                        name="cat_4_ids"
+                        type="text"
+                        label="ID категорий"
+                        description="ID категорий"
+                        default=""
+                        />
+
+
+
+
+                <field
+                        name="cat_5_title"
+                        type="text"
+                        label="Название раздела"
+                        description="Название раздела"
+                        default=""
+                        />
+
+                <field
+                        name="cat_5_img"
+                        type="media"
+                        label="Фото раздела"
+                        description="Фото раздела"
+                        />
+
+                <field
+                        name="cat_5_ids"
+                        type="text"
+                        label="ID категорий"
+                        description="ID категорий"
+                        default=""
+                        />
+
+
+
+
+                <field
+                        name="cat_6_title"
+                        type="text"
+                        label="Название раздела"
+                        description="Название раздела"
+                        default=""
+                        />
+
+                <field
+                        name="cat_6_img"
+                        type="media"
+                        label="Фото раздела"
+                        description="Фото раздела"
+                        />
+
+                <field
+                        name="cat_6_ids"
+                        type="text"
+                        label="ID категорий"
+                        description="ID категорий"
+                        default=""
+                        />
+
+
+			</fieldset>
+
+
+		</fields>
+	</config>
+</extension>

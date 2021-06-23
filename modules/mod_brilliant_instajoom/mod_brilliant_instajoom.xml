@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="3.0" method="upgrade">
+	<name>Brilliant Instajoom</name>
+	<author>Yuriy Galin</author>
+	<creationDate>18.01.2014</creationDate>
+	<copyright>Copyright (C) 2014 All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>mail@yuragalin.com</authorEmail>
+	<authorUrl>http://yuragalin.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_BRILLIANT_INSTAJOOM_MODDESC</description>
+	<files>
+		<filename module="mod_brilliant_instajoom">mod_brilliant_instajoom.php</filename>
+		<folder>tmpl</folder>
+		<folder>sql</folder>
+		<filename>index.html</filename>		
+		<filename>mod_brilliant_instajoom.xml</filename>
+    <filename>helper.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_brilliant_instajoom.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_brilliant_instajoom.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_brilliant_instajoom.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_brilliant_instajoom.sys.ini</language>
+	</languages>
+	
+	<update> <!-- Runs on update; New in 2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>	
+	</update>
+	
+	<updateservers>
+     <server type="module"  priority="1" name="BrilliantInstajoomUpgrade">http://yuragalin.com/download/brilliant_instajoom_updater.xml</server>
+  </updateservers>   
+   
+   
+	<config> 
+      <fields name="params">
+            <fieldset name="basic"> <!--Основные параметры, буду описывать только их-->
+            
+            
+                <field
+                    name="USER_NAME"
+                    type="text"
+                    label="MOD_BRILLIANT_INSTAJOOM_USER_NAME"
+                    description="MOD_BRILLIANT_INSTAJOOM_USER_NAME_DESC"
+                    default="yuragalin"                
+                />
+                
+                <field
+                    name="AdminPhotoCount"
+                    type="text"
+                    label="MOD_BRILLIANT_INSTAJOOM_PHOTO_COUNT"
+                    description="MOD_BRILLIANT_INSTAJOOM_PHOTO_COUNT_DESC"
+                    default="6"                
+                />
+                
+                <field
+                    name="PHOTO_WIDTH"
+                    type="text"
+                    label="MOD_BRILLIANT_INSTAJOOM_PHOTO_WIDTH"
+                    description="MOD_BRILLIANT_INSTAJOOM_PHOTO_WIDTH_DESC"
+                    default="50px"                
+                />
+                
+                <field 
+                    name="DISPLAY_IMG_HOVER_EFFECT" 
+                    type="radio" 
+                    default="1"
+                    label="MOD_BRILLIANT_INSTAJOOM_DISPLAY_IMG_HOVER_EFFECT" 
+                    description="MOD_BRILLIANT_INSTAJOOM_DISPLAY_IMG_HOVER_EFFECT_DESC">
+                      <option value="1">JYES</option>
+                      <option value="0">JNO</option>
+                </field>
+                              
+                <field
+                    name="CLIENT_ID"
+                    type="text"
+                    label="MOD_BRILLIANT_INSTAJOOM_CLIENT_ID"
+                    description="MOD_BRILLIANT_INSTAJOOM_CLIENT_ID_DESC"
+                    default=""                
+                />
+                
+                <field 
+                    name="DISPLAY_ALL_PHOTOS_LINK" 
+                    type="radio" 
+                    default="1"
+                    label="MOD_BRILLIANT_INSTAJOOM_DISPLAY_ALL_PHOTOS_LINK" 
+                    description="MOD_BRILLIANT_INSTAJOOM_DISPLAY_ALL_PHOTOS_LINK_DESC">
+                      <option value="1">JYES</option>
+                      <option value="0">JNO</option>
+                </field>
+                
+                <field 
+                    name="DISPLAY_DEV_LINK" 
+                    type="radio" 
+                    default="1"
+                    label="MOD_BRILLIANT_INSTAJOOM_DISPLAY_DEV_LINK" 
+                    description="MOD_BRILLIANT_INSTAJOOM_DISPLAY_DEV_LINK_DESC">
+                      <option value="1">JYES</option>
+                      <option value="0">JNO</option>
+                </field>
+                
+
+            </fieldset>
+        </fields>    
+   </config>     
+           
+</extension>

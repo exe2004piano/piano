@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<extension type="module" version="3.0.0" method="upgrade" client="site">
+    <name>MODULE_SCROLL</name>
+    <author>efanych</author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <copyright></copyright>
+    <license></license>
+    <version>1.0</version>
+    <description>MOD_SCROLL_DESC</description>
+
+	<customContent />
+
+    <files>
+        <filename module="mod_scroll">mod_scroll.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_scroll.ini</language>
+		<language tag="en-GB">language/en-GB.mod_scroll.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU.mod_scroll.ini</language>
+		<language tag="ru-RU">language/ru-RU.mod_scroll.sys.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+				<field
+					name="ot"
+					type="text"
+					default="9"
+					size="10"
+					label="Время от"
+					description="Время от"
+					>
+				</field>
+
+				<field
+					name="do"
+					type="text"
+					default="21"
+					size="10"
+					label="Время до"
+					description="Время до"
+					>
+				</field>
+
+
+				<field
+					name="ot_n"
+					type="text"
+					default="10"
+					size="10"
+					label="В выходные от"
+					description="В выходные от"
+					>
+				</field>
+
+				<field
+					name="do_n"
+					type="text"
+					default="20"
+					size="10"
+					label="В выходные до"
+					description="В выходные до"
+					>
+				</field>
+
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

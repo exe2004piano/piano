@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_top_basket</name>
+	<files>
+		<filename module="mod_z_top_basket">mod_z_top_basket.php</filename>
+	</files>
+</extension>

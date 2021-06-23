@@ -1,0 +1,59 @@
+/*
+# ------------------------------------------------------------------------
+# Templates for Joomla 2.5 - Joomla 3.5
+# ------------------------------------------------------------------------
+# Copyright (C) 2011-2013 Jtemplate.ru. All Rights Reserved.
+# @license - PHP files are GNU/GPL V2.
+# Author: Makeev Vladimir
+# Websites:  http://www.jtemplate.ru 
+# ---------  http://code.google.com/p/jtemplate/   
+# ------------------------------------------------------------------------
+*/
+#jt_jshopping_lates_slider { float:left; width: 100%;}
+.bx-wrapper { float:left;}
+#jt_jshopping_lates_slider ul { margin:0; padding:0; width:100%;}
+#jt_jshopping_lates_slider ul li { background: none; margin:0; list-style-type: none; float: left;}
+#jt_jshopping_lates_slider .jt_prev, #jt_jshopping_lates_slider .jt_next {}
+#jt_jshopping_lates_slider .jt_prev { float:left;}
+#jt_jshopping_lates_slider .jt_next { float:right;}
+#jt_jshopping_lates_slider .jt_prev a, #jt_jshopping_lates_slider .jt_next  a {
+    background: url("../images/arrow.png") no-repeat scroll left center;
+    cursor: pointer;
+    width: 24px;
+    z-index: 99;
+	text-indent:-9999px;
+	opacity:0.8;
+}
+#jt_jshopping_lates_slider .jt_prev a:hover, #jt_jshopping_lates_slider .jt_next  a:hover {opacity:1;}
+#jt_jshopping_lates_slider .jt_prev a {
+    float: left;
+}
+#jt_jshopping_lates_slider .jt_next a {
+    background-position: right center;
+    float: right;
+}
+#jt_jshopping_lates_slider .jt_prev_v, #jt_jshopping_lates_slider .jt_next_v {
+	position:relative;
+	float:left;
+	width:100%;
+	height:24px;
+	} 
+#jt_jshopping_lates_slider .jt_next_v { clear:both;}
+#jt_jshopping_lates_slider .jt_prev_v a, #jt_jshopping_lates_slider .jt_next_v a {
+	width:100%;
+	height:24px;
+	text-indent:-9999px;
+	cursor: pointer;
+	position:absolute;
+	}
+#jt_jshopping_lates_slider .jt_prev_v a {
+	background: url("../images/prev_v.png") no-repeat scroll center center #2C2D35;
+	top:0;
+	}
+#jt_jshopping_lates_slider .jt_next_v a {
+	background: url("../images/next_v.png") no-repeat scroll center center #2C2D35;
+	bottom:5px;
+	}
+#jt_jshopping_lates_slider .product_label {
+    position: absolute;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_dopnews</name>
+	<files>
+		<filename module="mod_z_dopnews">mod_z_dopnews.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="dopnews" type="repeatable" icon="list"
+					   label="Закрепленные новости" description="Закрепленные новости"
+					   default=""
+					   maximum="10">
+					<fieldset hidden="true" repeat="true">
+
+						<field name="dopnews"
+							   type="sql"
+							   class="inputbox"
+							   query="SELECT id, `name` FROM #__zoo_item WHERE access=1 AND application_id=1 ORDER BY id DESC "
+							   key_field="id"
+							   value_field="name"
+							   label="новости">
+							   <option value="0">Выбрать</option>
+						</field>
+					</fieldset>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+
+
+</extension>

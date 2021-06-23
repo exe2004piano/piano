@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_5_blocks</name>
+
+	<files>
+		<filename module="mod_z_5_blocks">mod_z_5_blocks.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field name="name1"	type="text"	/>
+                <field name="text1"	type="text"	/>
+
+                <field name="name2"	type="text"	/>
+                <field name="text2"	type="text"	/>
+
+                <field name="name3"	type="text"	/>
+                <field name="text3"	type="text"	/>
+
+                <field name="name4"	type="text"	/>
+                <field name="text4"	type="text"	/>
+
+                <field name="name5"	type="text"	/>
+                <field name="text5"	type="text"	/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

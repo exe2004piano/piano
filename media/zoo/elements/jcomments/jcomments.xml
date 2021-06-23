@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<element type="jcomments" group="Comments">
+	<name>JComments</name>
+	<author>smart</author>
+	<creationDate>22/04/2010</creationDate>
+	<copyright>Copyright 2009-2010 JoomlaTune.ru All rights reserved!</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>smart@joomlatune.ru</authorEmail>
+	<authorUrl>http://www.joomlatune.ru</authorUrl>
+	<version>1.0</version>
+	<description>JComments (http://www.jcomments.com/)</description>
+	<params group="render">
+		<param name="showlabel" type="radio" default="0" label="Show Label" description="Show/Hide element label">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="altlabel" type="text" default="" label="Alternative Label" description="Possibility to override the default element label for this element rendering in this template position. Normally keep this field blank." />
+	</params>
+	<params>
+		<param name="name" type="text" default="" label="Name" description="Name used in item editor" />
+		<param name="description" type="text" default="" label="Description" description="Description tooltip used in item editor" />
+	</params>
+</element>

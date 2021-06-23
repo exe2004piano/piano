@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_serts</name>
+	<files>
+		<filename module="mod_z_serts">mod_z_serts.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+
+				<field name="slider" type="repeatable" icon="list"
+					   label="Выберите фото и описание" description="Выберите фото и описание"
+					   default=""
+					   maximum="50"
+				>
+					<fieldset hidden="true" repeat="true">
+
+						<field name="img" type="media"
+							   label="Картинка серта" description="Картинка серта" />
+
+						<field name="title" type="text"
+							   label="Название" description="Название" />
+
+					</fieldset>
+				</field>
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

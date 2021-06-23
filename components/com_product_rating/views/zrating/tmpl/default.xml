@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="COM_PRODUCT_RATING_ZRATING_VIEW_DEFAULT_TITLE" hidden="false">
+                <message><![CDATA[COM_PRODUCT_RATING_ZRATING_VIEW_DEFAULT_DESC]]></message>
+        </layout>
+</metadata>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+<name>Jshopping Custom Products</name> 
+	<creationDate>20.12.2012</creationDate>
+    <author>MAXXmarketing GmbH</author>
+    <authorEmail>marketing@maxx-marketing.net</authorEmail>
+    <authorUrl>http://www.webdesigner-profi.de</authorUrl>
+    <copyright></copyright>
+    <license>Open Source License, GNU GPL</license>
+    <version>4.0.1</version>
+	<description>Displays custom products of shop.</description>
+	<files>
+		<filename module="mod_jshopping_custom_products">mod_jshopping_custom_products.php</filename>
+		<folder>admin</folder>
+        <folder>tmpl</folder>
+		<filename>index.html</filename>
+	</files>
+    <languages>
+        <language
+            tag="en-GB">en-GB.mod_jshopping_latest_products.ini</language>
+		<language
+            tag="de-DE">de-DE.mod_jshopping_latest_products.ini</language>
+		<language
+            tag="ru-RU">ru-RU.mod_jshopping_latest_products.ini</language>
+    </languages>       
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_jshopping_custom_products/admin/fields">
+            <fieldset name="basic">  
+                <field
+                    name="products"
+                    type="wishboxjshoppingproduct"
+                    label="PRODUCTS"
+                    description="" />
+                <field
+                    name="show_image"
+                    type="radio"
+                    default="1"
+                    label="SHOW PRODUCT IMAGE"
+                    description="SHOW PRODUCT IMAGE">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />                               
+            </fieldset> 
+        </fields>
+    </config>          
+</extension>

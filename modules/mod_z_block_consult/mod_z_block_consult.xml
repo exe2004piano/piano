@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_block_consult</name>
+
+    <customContent />
+
+
+	<files>
+		<filename module="mod_z_block_consult">mod_z_block_consult.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+
+				<field
+					name="background"
+					type="media"
+					label="background image"
+					description="background image"
+					/>
+
+                <field
+                        name="background_mobile"
+                        type="media"
+                        label="background mobile image"
+                        description="background mobile image"
+                        />
+
+
+                <field
+                        name="background_ru"
+                        type="media"
+                        label="background RU image"
+                        description="background RU image"
+                        />
+
+                <field
+                        name="background_mobile_ru"
+                        type="media"
+                        label="background RU mobile image"
+                        description="background RU mobile image"
+                        />
+
+
+				<field
+					name="title_text"
+					type="text"
+					label="text in title"
+					description="text in title"
+					/>
+
+                <field
+                        name="title_phones"
+                        type="text"
+                        label="phones in title"
+                        description="phones in title"
+                        />
+
+
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

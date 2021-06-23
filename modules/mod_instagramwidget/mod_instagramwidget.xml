@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Instagram Widget</name>
+	<author>JoomlaWidget.CO.UK</author>
+	<creationDate>July 2015</creationDate>
+	<copyright>Copyright (C)2015 joomlawidget.co.uk</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>dev@joomlawidget.co.uk</authorEmail>
+	<authorUrl>www.joomlawidget.co.uk</authorUrl>
+	<version>1.0</version>
+	<description>Great You Have Sucessfully Installed The InstaGram Widget. Please Navigate To Module Manager To Configure Your Settings.</description>
+	<files>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_instagramwidget">mod_instagramwidget.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_instagramwidget.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_instagramwidget.ini</language>
+		<language tag="en-GB">en-GB.mod_instagramwidget.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="instagram_id"
+					type="text"
+					default="instagram"					
+					label="MOD_INSTAGRAM_ID"
+					description="MOD_INSTAGRAM_ID_DESC" />
+				<field 
+					name="margintop"
+					type="text"
+					default="50"
+					label="MOD_INSTAGRAM_WIDGET_MARGIN" 
+					description="MOD_INSTAGRAM_WIDGET_MARGIN_DESC" />
+				<field 
+					name="iwidth"
+					type="text"
+					default="340"
+					label="MOD_INSTAGRAM_WIDGET_WIDTH" 
+					description="MOD_INSTAGRAM_WIDGET_WIDTH_DESC" />
+				<field 
+					name="iheight"
+					type="text"
+					default="220"
+					label="MOD_INSTAGRAM_WIDGET_HEIGHT" 
+					description="MOD_INSTAGRAM_WIDGET_HEIGHT_DESC" />
+				<field 
+					name="thumbnail"
+					type="text"
+					default="100"
+					label="MOD_INSTAGRAM_WIDGET_THUMBNAIL_SIZE" 
+					description="MOD_INSTAGRAM_WIDGET_THUMBNAIL_SIZE_DESC" />
+				<field 
+					name="horizontal"
+					type="text"
+					default="3"
+					label="MOD_INSTAGRAM_WIDGET_HORIZONTAL" 
+					description="MOD_INSTAGRAM_WIDGET_HORIZONTAL_DESC" />
+				<field 
+					name="vertical"
+					type="text"
+					default="2"
+					label="MOD_INSTAGRAM_WIDGET_VERTICAL" 
+					description="MOD_INSTAGRAM_WIDGET_VERTICAL_DESC" />
+				<field
+					name="border"
+					type="radio"
+					default="1"
+					label="MOD_INSTAGRAM_WIDGET_BORDER"
+					description="MOD_INSTAGRAM_WIDGET_BORDER_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field 
+					name="background"
+					type="text"
+					default="ffffff"
+					label="MOD_INSTAGRAM_WIDGET_BACKGROUND" 
+					description="MOD_INSTAGRAM_WIDGET_BACKGROUND_DESC" />
+					Space of each photo
+				<field 
+					name="space"
+					type="text"
+					default="5"
+					label="MOD_INSTAGRAM_WIDGET_SPACE" 
+					description="MOD_INSTAGRAM_WIDGET_SPACE_DESC" />
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					default=""
+					label="MOD_INSTAGRAM_WIDGET_MODULE_CLASS"
+					description="MOD_INSTAGRAM_WIDGET_MODULE_CLASS_DESC" />
+				<field
+					name="loadjquery"
+					type="radio"
+					default="1"
+					label="MOD_INSTAGRAM_WIDGET_JQUERY"
+					description="MOD_INSTAGRAM_WIDGET_JQUERY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>		
+			</fieldset>
+		</fields>
+	</config>
+</extension>

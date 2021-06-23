@@ -1,0 +1,30 @@
+.news-teaser { 
+border-bottom: 2px dotted #99A3B0;
+margin-top: 30px;
+padding-bottom: 20px;
+clear:both;
+}
+.news-teaser:last-child { 
+border-bottom: none;
+}
+
+.news-teaser .news-teaser-title { 
+font-size:14px;
+font-weight:700;
+margin:0;
+}
+.news-teaser .date { 
+color: #89939F;
+font-style:italic;
+font-size:11px;
+margin-bottom: 2px;
+}
+.news-teaser .news-content { 
+margin-bottom: 10px;
+margin-top: 10px;
+}
+.news-teaser .readmore { 
+margin-top: 10px;
+text-align: right;
+}
+

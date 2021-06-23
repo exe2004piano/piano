@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_label_products</name>
+	<files>
+		<filename module="mod_z_label_products">mod_z_label_products.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="ids"
+					type="text"
+					label="Label ID's"
+					description="Label ID's"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

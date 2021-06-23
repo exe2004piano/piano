@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_newbanner</name>
+
+    <files>
+        <filename module="mod_z_newbanner">mod_z_newbanner.php</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field name="main_text"
+                       type="textarea"
+                       default=""
+                       label="Текст"
+                       description="Текст"
+                       filter="raw"
+                       width="600"
+                       class="input-xxlarge"
+                       cols="60"
+                       rows="20"
+                />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

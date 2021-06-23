@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site">
+	<name>mod_youtube</name>
+	<files>
+		<filename module="mod_youtube">mod_youtube.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

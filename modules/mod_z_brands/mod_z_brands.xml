@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_brands</name>
+	<description>MOD_Z_BRANDS_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_z_brands">mod_z_brands.php</filename>
+	</files>
+
+</extension>

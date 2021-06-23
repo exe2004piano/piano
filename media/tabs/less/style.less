@@ -1,0 +1,126 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Tabs
+ * @version         3.1.3
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2012 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/tabs/style.min.css
+ */
+
+@import "../../nnframework/less/init.less";
+@import "bootstrap.less";
+
+.nn_tabs {
+	> ul.nav-tabs > li > a {
+		.transition-duration(.2s);
+		color: @linkColor;
+		text-decoration: none;
+		&:hover {
+			color: @linkColorHover;
+			text-decoration: none;
+		}
+	}
+	> .tab-content {
+		margin-bottom: 10px;
+	}
+
+	// Outline Content
+	&.outline_content {
+		> .tab-content {
+			margin-bottom: 18px;
+			padding: 0;
+			border: 1px solid #ddd;
+			border-top: none;
+			.border-radius(0 0 4px 4px);
+			.tab-pane {
+				padding: 8px 12px 4px;
+			}
+		}
+
+		> ul {
+			margin-bottom: 0;
+		}
+	}
+
+	// Outline Tabs
+	&.outline_handles > ul.nav-tabs > li > a,
+	&.outline_handles > ul.nav-tabs > li > a:hover, {
+		border-top-color: #ddd;
+		border-left-color: #ddd;
+		border-right-color: #ddd;
+	}
+
+	// Classes: Normal state + Hover state
+
+	// Small screen styling
+	@media (max-width: 768px) {
+		> ul.nav-tabs {
+			> li {
+				float: none;
+			}
+			> li:last-child,
+			> .active:last-child {
+				> a,
+				> a:hover {
+					border-bottom: 1px solid #ddd;
+				}
+			}
+		}
+	}
+
+	.tabColor(@name, @color) {
+		> ul.nav-tabs > li.@{name} {
+			> a,
+			> a:hover {
+				border-top: 5px solid lighten(@color, 20%);
+				padding-top: 4px;
+				.border-radius(5px 5px 0 0);
+			}
+			> a:hover, // Hover state
+			&.active > a { // Active state
+				border-top-color: @color;
+			}
+		}
+		@media (max-width: 768px) {
+			> ul.nav-tabs > li.@{name} {
+				> a,
+				> a:hover {
+					border-top-width: 1px;
+					.border-radius(0);
+				}
+			}
+		}
+	}
+
+	// Style: blue
+	.tabColor(~'blue', @btnPrimaryBackground);
+	.tabColor(~'primary', @btnPrimaryBackground);
+
+	// Style: info
+	.tabColor(~'info', @btnInfoBackgroundHighlight);
+
+	// Style: green / success
+	.tabColor(~'green', @btnSuccessBackgroundHighlight);
+	.tabColor(~'success', @btnSuccessBackgroundHighlight);
+
+	// Style: orange / warning
+	.tabColor(~'orange', @btnWarningBackgroundHighlight);
+	.tabColor(~'warning', @btnWarningBackgroundHighlight);
+
+	// Style: red / danger
+	.tabColor(~'red', @btnDangerBackgroundHighlight);
+	.tabColor(~'danger', @btnDangerBackgroundHighlight);
+	.tabColor(~'error', @btnDangerBackgroundHighlight);
+
+	// Style: grey / gray
+	.tabColor(~'grey', #808080);
+	.tabColor(~'gray', #808080);
+}

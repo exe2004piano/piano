@@ -1,0 +1,301 @@
+.jgram-body-active{
+	height: 100vh;
+	overflow: hidden;
+}
+
+.jgram-overlay{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0%;
+	left: 0%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 9999;
+}
+
+.jgram-overlay .jgram-img{
+	max-width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+
+#jgram-prev, #jgram-next{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 40px;
+	color: #818488;
+	z-index: 999;
+}
+
+#jgram-prev{
+	margin-left: -140px;
+}
+
+#jgram-next{
+	margin-left: 110px;
+}
+
+#jgram-close{
+	position: absolute;
+    top: 2%;
+    right: 5%;
+    color: #818488;
+    font-size: 30px;
+}
+
+#jgram-prev:hover, #jgram-next:hover, #jgram-close:hover{
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+}
+
+#jgram-prev:focus, #jgram-next:focus, #jgram-close:focus{
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+}
+
+.jgram-img:hover{
+	cursor: pointer;
+}
+
+.user, .user *, .tagged, .tagged *, .search, .search * {
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	font-family: inherit;
+}
+
+.user, .tagged, .search{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 15px;
+}
+
+.user img, .tagged img, .user video, .tagged video, .search img, .search video{
+	max-width: 100%;
+	border-radius: 4px;
+}
+
+.user .profile-pic{
+	width: 100%;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.user .profile-pic img{
+	width: 70px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 100%;
+}
+
+.user .user-info{
+	width: 100%;
+}
+
+.user .user-info h2{
+	font-size: 18px;
+	text-align: center;
+}
+
+.user .user-info h2, .user .user-info p, .user .user-info li, .search h2{
+	color: #4b4f54
+}
+
+.user .user-info p, .user .user-info a, .user .user-info li, .search p, .search li{
+	font-size: 10px;
+	letter-spacing: 1px;
+	line-height: 21px;
+}
+
+.user .user-info ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+.user .user-info li{
+	list-style: none;
+	display: inline;
+	margin-right: 15px;
+}
+
+.user .user-feed{
+	clear: both;
+}
+
+.search input[type="text"]{
+	padding: 5px;
+	min-height: 24px;
+}
+
+.search input[type="submit"]{
+	background: 0 0;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    vertical-align: top;
+}
+
+@media (min-width: 480px){
+	.jgram-overlay .jgram-img{
+		max-width: 400px;
+		margin-left: -200px;
+		margin-top: -200px;
+	}
+
+	#jgram-prev{
+		margin-left: -235px;
+	}
+
+	#jgram-next{
+		margin-left: 207px;
+	}
+
+	.user .profile-pic{
+		width: 130px;
+		float: left;
+	}
+
+	.user .profile-pic img{
+		width: 120px;
+	}
+
+	.user .user-info{
+		width: calc(100% - 130px);
+		float: left;
+	}
+
+	.user .user-info h2{
+		text-align: left;
+	}
+}
+
+@media (min-width: 768px){
+
+	.jgram-overlay .jgram-img{
+		max-width: 640px;
+		margin-left: -320px;
+		margin-top: -320px;
+	}
+
+	#jgram-prev{
+		margin-left: -390px;
+	}
+
+	#jgram-next{
+		margin-left: 360px;
+	}
+
+	.user .profile-pic{
+		width: 285px;
+	}
+
+	.user .profile-pic img{
+		width: 150px;
+	}
+
+	.user .user-info{
+		width: calc(100% - 285px);
+	}
+
+	.user .user-info h2{
+		font-size: 36px;
+	}
+
+	.user .user-info p, .user .user-info a, .user .user-info li, .search p, .search li{
+		font-size: 17px;
+	}
+}
+
+.user .user-feed div, .tagged .tagged-feed div, .search .search-feed div{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.user .col-1 div, .tagged .col-1 div, .search .col-1 div{
+	width: 100%;
+}
+
+.user .col-2 div, .tagged .col-2 div, .search .col-2 div{
+	width: 50%;
+}
+.user .col-3 div, .tagged .col-3 div, .search .col-3 div{
+	width: 33.3333333%;
+}
+.user .col-4 div, .tagged .col-4 div, .search .col-4 div{
+	width: 25%;
+}
+.user .col-5 div, .tagged .col-5 div, .search .col-5 div{
+	width: 20%;
+}
+.user .col-6 div, .tagged .col-6 div, .search .col-6 div{
+	width: 16.6666667%;
+}
+.user .col-7 div, .tagged .col-7 div, .search .col-7 div{
+	width: 14.2857143%;
+}
+.user .col-8 div, .tagged .col-8 div, .search .col-8 div{
+	width: 12.5%;
+}
+.user .col-9 div, .tagged .col-9 div, .search .col-9 div{
+	width: 11.1111111%;
+}
+.user .col-10 div, .tagged .col-10 div, .search .col-10 div{
+	width: 10%;
+}
+.user .col-11 div, .tagged .col-11 div, .search .col-11 div{
+	width: 9.09090909;
+}
+.user .col-12 div, .tagged .col-12 div, .search .col-12 div{
+	width: 8.33333333;
+}
+
+.user .pad-1 div, .tagged .pad-1 div, .search .pad-1 div{
+	padding: 1px;
+}
+.user .pad-2 div, .tagged .pad-2 div, .search .pad-2 div{
+	padding: 2px;
+}
+.user .pad-3 div, .tagged .pad-3 div, .search .pad-3 div{
+	padding: 3px;
+}
+.user .pad-4 div, .tagged .pad-4 div, .search .pad-4 div{
+	padding: 4px;
+}
+.user .pad-5 div, .tagged .pad-5 div, .search .pad-5 div{
+	padding: 5px;
+}
+.user .pad-6 div, .tagged .pad-6 div, .search .pad-6 div{
+	padding: 6px;
+}
+.user .pad-7 div, .tagged .pad-7 div, .search .pad-7 div{
+	padding: 7px;
+}
+.user .pad-8 div, .tagged .pad-8 div, .search .pad-8 div{
+	padding: 8px;
+}
+.user .pad-9 div, .tagged .pad-9 div, .search .pad-9 div{
+	padding: 9px;
+}
+.user .pad-10 div, .tagged .pad-10 div, .search .pad-10 div{
+	padding: 10px;
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="1.6.0"
+    client="site"
+    method="upgrade">
+<name>mod_vitalik_jsh_categories</name> 
+	<creationDate>20.12.2012</creationDate>
+    <author>MAXXmarketing GmbH</author>
+    <authorEmail>marketing@maxx-marketing.net</authorEmail>
+    <authorUrl>http://www.webdesigner-profi.de</authorUrl>
+    <copyright></copyright>
+    <license>Open Source License, GNU GPL</license>
+    <version>4.0.1</version>
+	<description>Displays a categories in shop.</description>
+	<files>
+	<filename module="mod_vitalik_jsh_categories">mod_vitalik_jsh_categories.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+        <filename>helper.php</filename>
+	</files> 
+	<languages>
+		<language tag="ru-RU">ru-Ru.mod_vitalik_jsh_categories.ini</language>
+	</languages>   
+    <config>
+        <fields name="params">
+            <fieldset name="basic"> 
+				<field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />                               
+            </fieldset>  
+			<fieldset name="categories" label="MOD_VITALIK_JSH_CATEGORIES_FIELDSET_CATEGORIES_LABEL">
+                <field
+                    name="show_image"
+                    type="radio"
+                    default="0"
+                    label="SHOW_IMAGE"
+                    description="SHOW IMAGES BY MODULE CATEGORIES">
+                    <option
+                        value="0">JNO</option>
+                    <option
+                        value="1">JYES</option>
+                </field>
+                <field
+                    name="sort"
+                    type="list"
+                    default="id"
+                    label="SORT_BY"
+                    description="SORT CATEGORIES BY">
+                    <option
+                        value="id">ID</option>
+                    <option
+                        value="name">NAME</option>
+                    <option
+                        value="order">ORDERING</option>                        
+                </field>                
+                <field
+                    name="ordering"
+                    type="radio"
+                    default="asc"
+                    label="SORT_ORDERING"
+                    description="SORT CATEGORIES BY">
+                    <option
+                        value="asc">ASCENDING</option>
+                    <option
+                        value="desc">DESCENDING</option>
+                </field>
+			</fieldset>	
+			<fieldset name="products" label="MOD_VITALIK_JSH_CATEGORIES_FIELDSET_PRODUCTS_LABEL">
+				<field
+                    name="show_product_image"
+                    type="radio"
+                    default="0"
+                    label="SHOW_IMAGE"
+                    description="SHOW PRODUCT IMAGES BY MODULE CATEGORIES">
+                    <option
+                        value="0">JNO</option>
+                    <option
+                        value="1">JYES</option>
+                </field>
+				<field
+                    name="order_products"
+                    type="radio"
+                    default="prod.product_id"
+                    label="SORT_BY"
+                    description="order_products">
+                    <option value="prod.product_id">ID</option>
+                    <option value="name">Name</option>
+					<option value="prod.product_ean">Code</option>
+					<option value="pr_cat.product_ordering">ORDERING</option>
+                </field>
+				<field
+                    name="dir_order_products"
+                    type="radio"
+                    default="asc"
+                    label="SORT_ORDERING"
+                    description="dir_order_products">
+                    <option value="asc">ASCENDING</option>
+                    <option value="desc">DESCENDING</option>
+                </field>
+        	</fieldset>        
+        </fields>
+    </config>     
+</extension>

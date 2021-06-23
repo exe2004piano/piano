@@ -1,0 +1,77 @@
+<?php
+// $dop_id
+
+$q = "SELECT * FROM #__jshopping_categories WHERE category_id={$dop_id} AND category_publish=1 LIMIT 1";
+$db->setQuery($q);
+$dop_cat = $db->loadObject();
+$link = SEFLink('index.php?option=com_jshopping&controller=category&task=view&category_id='.$dop_id);
+
+$menu .='
+        <li class="b-menu__item ">
+            <a href="'.$link.'" class="b-menu__link"><svg class="b-menu__icon"><use class="b-menu__part" xlink:href="/templates/pianino_new/i/sprite.svg#mikrofony"></use></svg><span class="b-menu__text">'.$dop_cat->$name_ru.'</span></a>';
+
+$q = "SELECT * FROM #__jshopping_categories WHERE category_parent_id={$dop_id} AND category_publish=1 ORDER BY ordering";
+$db->setQuery($q);
+if($cat2 = $db->loadObjectList())
+{
+    $menu .='<div class="b-menu__subContent">
+                    <div class="b-menu__subMenu">';
+    foreach($cat2 AS $c2)
+    {
+        $link = SEFLink('index.php?option=com_jshopping&controller=category&task=view&category_id='.$c2->category_id);
+
+        $menu .= '<div class="b-menu__subMenu-column"><a href="'.$link.'" class="b-menu__subMenu-title"><span>'.$c2->$name_ru.'</span></a>';
+
+        $q =
+            "SELECT p.product_id, p.product_price, p.sklad, p.`product_ean` title
+                 FROM #__jshopping_products AS p
+                 LEFT JOIN #__jshopping_products_to_categories AS c ON p.product_id=c.product_id
+                 WHERE p.product_publish = '1' AND c.category_id={$c2->category_id}
+                 ORDER BY
+                 CASE
+                    WHEN p.sklad = 3 THEN 1 ELSE 0
+                 END ,
+                 p.product_price
+                 LIMIT 0, 5
+                ";
+
+        $db->setQuery($q);
+        $items = $db->loadObjectList();
+        if($items)
+        {
+            $menu .= '<div class="b-menu__subMenu-nameBlock one_line_div">';
+            // --- найдены товары, значит это финальный раздел
+            foreach($items AS $a)
+            {
+                $link_p = SEFLink('index.php?option=com_jshopping&controller=product&task=view&category_id='.$c2->category_id.'&product_id='.$a->product_id);
+                $menu .= '<a href="'.$link_p.'" class="b-menu__subMenu-name one_line">'.$a->title.'</a>';
+            }
+
+            $menu .= '<a href="'.$link.'" class="b-menu__subMenu-name one_line small_line">еще товары</a>';
+            $menu .= '</div>';
+        }
+        else
+        {
+            // --- товаров нет, значит это не последняя категория
+            $q = "SELECT * FROM #__jshopping_categories WHERE category_parent_id={$c2->category_id} AND category_publish=1 ORDER BY ordering";
+            $db->setQuery($q);
+            if($cat3 = $db->loadObjectList())
+            {
+                $menu .= '<div class="b-menu__subMenu-nameBlock one_line_div">';
+                foreach($cat3 AS $c3)
+                {
+                    $link_c = SEFLink('index.php?option=com_jshopping&controller=category&task=view&category_id='.$c3->category_id);
+                    $menu .= '<a href="'.$link_c.'" class="b-menu__subMenu-name one_line">'.$c3->$name_ru.'</a>';
+                }
+                $menu .= '</div>';
+            }
+
+        }
+
+
+        $menu .= '</div>';
+    }
+
+    $menu .= '</div></div>';
+}
+$menu .= '</li>';

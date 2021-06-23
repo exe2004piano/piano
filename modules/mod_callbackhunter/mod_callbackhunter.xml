@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<extension type="module" version="3.0.0" method="upgrade" client="site">
+    <name>mod_callbackhunter</name>
+    <description>mod_callbackhunter</description>
+    <files>
+        <filename module="mod_callbackhunter">mod_callbackhunter.php</filename>
+        <filename>index.html</filename>
+    </files>
+
+
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+				<field
+					name="timer"
+					type="text"
+					default="1"
+					size="10"
+					label="Время min (t1, t2, t3...)"
+					description="Время min (t1, t2, t3...)"
+					>
+				</field>
+
+
+				<field
+						name="text"
+						type="editor"
+						label="Текст в форме"
+						required="false"
+						default=""
+						rows="3"
+						class=""
+						readonly="false"
+						disabled="false"
+						filter="raw">
+				</field>
+
+
+                <field
+                        name="text_n"
+                        type="editor"
+                        label="Текст ночью"
+                        required="false"
+                        default=""
+                        rows="3"
+                        class=""
+                        readonly="false"
+                        disabled="false"
+                        filter="raw">
+                </field>
+
+
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

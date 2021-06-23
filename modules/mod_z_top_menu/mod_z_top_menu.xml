@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_top_menu</name>
+	<description>MOD_Z_TOP_MENU_XML_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_z_top_menu">mod_z_top_menu.php</filename>
+    </files>
+
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="menutype"
+                    type="menu"
+                    label="MOD_Z_TOP_MENU_FIELD_MENUTYPE_LABEL"
+                    description="MOD_Z_TOP_MENU_FIELD_MENUTYPE_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

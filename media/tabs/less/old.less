@@ -1,0 +1,242 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Tabs
+ * @version         3.1.3
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2012 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/tabs/old.min.css
+ */
+
+@import "../../nnframework/less/init.less";
+@import "bootstrap.less";
+
+.nn_tabs.oldschool > ul {
+	margin: 5px 10px 0 10px !important;
+	padding: 0 10px;
+	line-height: 1em;
+	zoom: 1; // Fix for IE height issue
+	padding: 0 !important;
+	list-style: none !important;
+	list-style-image: none !important;
+	background: none !important;
+	border: none !important;
+}
+.nn_tabs.oldschool > ul > li {
+	float: left;
+	margin: 5px 2px 0 0 !important;
+	padding: 0;
+	list-style: none !important;
+	list-style-image: none !important;
+	background: none !important;
+}
+.nn_tabs.oldschool > ul > li.active {
+	margin-top: 0 !important;
+}
+// Tabs
+.nn_tabs.oldschool > ul > li > a,
+.nn_tabs.oldschool > ul > li > a:link,
+.nn_tabs.oldschool > ul > li > a:visited,
+.nn_tabs.oldschool > ul > li > a:active,
+.nn_tabs.oldschool > ul > li > a:hover {
+	color: #666666;
+	outline: 0;
+	text-decoration: none;
+}
+.nn_tabs.oldschool > ul > li > a,
+.nn_tabs.oldschool > ul > li > a:hover {
+	display: block;
+	width: auto;
+	_width: 0%;
+	padding: 5px 5px 0 5px;
+	height: 20px;
+	_height: 25px;
+	font-size: 14px;
+	line-height: 1em !important;
+	font-weight: bold;
+	white-space: nowrap;
+	border: solid 1px @btnBorder;
+	border-bottom: none;
+	text-decoration: none !important;
+	#gradient > .vertical(@white, @white);
+	.border-radius(10px 10px 0 0);
+}
+.nn_tabs.oldschool > ul > li.blue > a,.nn_tabs.oldschool > ul > li.blue > a:hover,
+.nn_tabs.oldschool > ul > li.green > a,.nn_tabs.oldschool > ul > li.green > a:hover,
+.nn_tabs.oldschool > ul > li.red > a,.nn_tabs.oldschool > ul > li.red > a:hover,
+.nn_tabs.oldschool > ul > li.orange > a,.nn_tabs.oldschool > ul > li.orange > a:hover,
+.nn_tabs.oldschool > ul > li.grey > a,.nn_tabs.oldschool > ul > li.grey > a:hover,
+.nn_tabs.oldschool > ul > li.gray > a,.nn_tabs.oldschool > ul > li.gray > a:hover,
+.nn_tabs.oldschool > ul > li.primary > a,.nn_tabs.oldschool > ul > li.primary > a:hover,
+.nn_tabs.oldschool > ul > li.info > a,.nn_tabs.oldschool > ul > li.info > a:hover,
+.nn_tabs.oldschool > ul > li.success > a,.nn_tabs.oldschool > ul > li.success > a:hover,
+.nn_tabs.oldschool > ul > li.warning > a, .nn_tabs.oldschool > ul > li.warning > a:hover,
+.nn_tabs.oldschool > ul > li.danger > a,.nn_tabs.oldschool > ul > li.danger > a:hover,
+.nn_tabs.oldschool > ul > li.error > a,.nn_tabs.oldschool > ul > li.error > a:hover {
+	padding: 5px 5px 0 5px;
+	border: solid 1px @btnBorder !important;
+	border-bottom: none;
+	.border-radius(10px 10px 0 0);
+}
+
+@bgcolor: @btnPrimaryBackground;
+// Active state
+.nn_tabs.oldschool > ul > li.active > a,
+.nn_tabs.oldschool > ul > li.active > a:hover {
+	color: @white;
+	#gradient > .vertical(lighten(@bgcolor, 15%), lighten(@bgcolor, 0%));
+}
+// Hover state
+.nn_tabs.oldschool > ul > li > a:hover {
+	color: @grayDark;
+	#gradient > .vertical(lighten(@bgcolor, 30%), lighten(@bgcolor, 20%));
+}
+// Active state
+.nn_tabs.oldschool > ul > li.active > a,
+.nn_tabs.oldschool > ul > li.active > a:hover {
+	padding-bottom: 5px;
+}
+
+// Content area
+.nn_tabs.oldschool > .tab-content {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	border: none !important;
+}
+.nn_tabs.oldschool > .tab-content > .tab-pane {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	clear: left;
+	padding: 10px 20px;
+	border: 1px solid @btnBorder;
+	.border-radius(10px);
+}
+
+// Style: blue
+@bgcolor_blue: @btnPrimaryBackground;
+// Normal state
+.nn_tabs.oldschool > ul > li.blue > a,
+.nn_tabs.oldschool > ul > li.primary > a {
+	#gradient > .vertical(lighten(@bgcolor_blue, 40%), lighten(@bgcolor_blue, 30%));
+}
+// Hover state
+.nn_tabs.oldschool > ul > li.blue > a:hover,
+.nn_tabs.oldschool > ul > li.primary > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_blue, 30%), lighten(@bgcolor_blue, 15%));
+}
+// Active state
+.nn_tabs.oldschool > ul > li.active.blue > a,
+.nn_tabs.oldschool > ul > li.active.blue > a:hover,
+.nn_tabs.oldschool > ul > li.active.primary > a,
+.nn_tabs.oldschool > ul > li.active.primary > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_blue, 15%), lighten(@bgcolor_blue, 0%));
+}
+
+// Style: info
+@bgcolor_info: @btnInfoBackgroundHighlight;
+// Normal state
+.nn_tabs.oldschool > ul > li.info > a {
+	#gradient > .vertical(lighten(@bgcolor_info, 40%), lighten(@bgcolor_info, 30%));
+}
+// Hover state
+.nn_tabs.oldschool > ul > li.info > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_info, 30%), lighten(@bgcolor_info, 15%));
+}
+// Active state
+.nn_tabs.oldschool > ul > li.active.info > a,
+.nn_tabs.oldschool > ul > li.active.info > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_info, 15%), lighten(@bgcolor_info, 0%));
+}
+
+// Style: green / success
+@bgcolor_green: @btnSuccessBackgroundHighlight;
+// Normal state
+.nn_tabs.oldschool > ul > li.green > a,
+.nn_tabs.oldschool > ul > li.success > a {
+	#gradient > .vertical(lighten(@bgcolor_green, 40%), lighten(@bgcolor_green, 30%));
+}
+// Hover state
+.nn_tabs.oldschool > ul > li.green > a:hover,
+.nn_tabs.oldschool > ul > li.success > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_green, 30%), lighten(@bgcolor_green, 15%));
+}
+// Active state
+.nn_tabs.oldschool > ul > li.active.green > a,
+.nn_tabs.oldschool > ul > li.active.green > a:hover,
+.nn_tabs.oldschool > ul > li.active.success > a,
+.nn_tabs.oldschool > ul > li.active.success > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_green, 15%), lighten(@bgcolor_green, 0%));
+}
+
+// Style: orange / warning
+@bgcolor_orange: @btnWarningBackgroundHighlight;
+// Normal state
+.nn_tabs.oldschool > ul > li.orange > a,
+.nn_tabs.oldschool > ul > li.warning > a {
+	#gradient > .vertical(lighten(@bgcolor_orange, 40%), lighten(@bgcolor_orange, 30%));
+}
+// Hover state
+.nn_tabs.oldschool > ul > li.orange > a:hover,
+.nn_tabs.oldschool > ul > li.warning > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_orange, 30%), lighten(@bgcolor_orange, 15%));
+}
+// Active state
+.nn_tabs.oldschool > ul > li.active.orange > a,
+.nn_tabs.oldschool > ul > li.active.orange > a:hover,
+.nn_tabs.oldschool > ul > li.active.warning > a,
+.nn_tabs.oldschool > ul > li.active.warning > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_orange, 15%), lighten(@bgcolor_orange, 0%));
+}
+
+// Style: red / danger
+@bgcolor_red: @btnDangerBackgroundHighlight;
+// Normal state
+.nn_tabs.oldschool > ul > li.red > a,
+.nn_tabs.oldschool > ul > li.danger > a,
+.nn_tabs.oldschool > ul > li.error > a {
+	#gradient > .vertical(lighten(@bgcolor_red, 40%), lighten(@bgcolor_red, 30%));
+}
+// Hover state
+.nn_tabs.oldschool > ul > li.red > a:hover,
+.nn_tabs.oldschool > ul > li.danger > a:hover,
+.nn_tabs.oldschool > ul > li.error > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_red, 30%), lighten(@bgcolor_red, 15%));
+}
+// Active state
+.nn_tabs.oldschool > ul > li.active.red > a,
+.nn_tabs.oldschool > ul > li.active.red > a:hover,
+.nn_tabs.oldschool > ul > li.active.danger > a,
+.nn_tabs.oldschool > ul > li.active.danger > a:hover,
+.nn_tabs.oldschool > ul > li.active.error > a,
+.nn_tabs.oldschool > ul > li.active.error > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_red, 15%), lighten(@bgcolor_red, 0%));
+}
+
+// Style: grey
+@bgcolor_grey: #777777;
+// Normal state
+.nn_tabs.oldschool > ul > li.grey > a,
+.nn_tabs.oldschool > ul > li.gray > a{
+	#gradient > .vertical(lighten(@bgcolor_grey, 40%), lighten(@bgcolor_grey, 30%));
+}
+// Hover state
+.nn_tabs.oldschool > ul > li.grey > a:hover,
+.nn_tabs.oldschool > ul > li.gray > a:hover{
+	#gradient > .vertical(lighten(@bgcolor_grey, 30%), lighten(@bgcolor_grey, 15%));
+}
+// Active state
+.nn_tabs.oldschool > ul > li.active.grey > a,
+.nn_tabs.oldschool > ul > li.active.grey > a:hover,
+.nn_tabs.oldschool > ul > li.active.gray > a,
+.nn_tabs.oldschool > ul > li.active.gray > a:hover {
+	#gradient > .vertical(lighten(@bgcolor_grey, 15%), lighten(@bgcolor_grey, 0%));
+}

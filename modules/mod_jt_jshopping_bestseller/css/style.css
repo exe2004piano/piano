@@ -1,0 +1,60 @@
+/*
+# ------------------------------------------------------------------------
+# Templates for Joomla 2.5 - Joomla 3.5
+# ------------------------------------------------------------------------
+# Copyright (C) 2011-2013 Jtemplate.ru. All Rights Reserved.
+# @license - PHP files are GNU/GPL V2.
+# Author: Makeev Vladimir
+# Websites:  http://www.jtemplate.ru 
+# ---------  http://code.google.com/p/jtemplate/   
+# ------------------------------------------------------------------------
+*/
+#jt_jshopping_bestseller_slider { float:left; width: 100%;}
+.bx-wrapper { float:left;}
+#jt_jshopping_bestseller_slider ul { margin:0; padding:0; width:100%;}
+#jt_jshopping_bestseller_slider ul li { background: none; margin:0; list-style-type: none; float: left;}
+#jt_jshopping_bestseller_slider .jt_prev_b, #jt_jshopping_bestseller_slider .jt_next_b {}
+#jt_jshopping_bestseller_slider .jt_prev_b { float:left;}
+#jt_jshopping_bestseller_slider .jt_next_b { float:right;}
+#jt_jshopping_bestseller_slider .jt_prev_b a, #jt_jshopping_bestseller_slider .jt_next_b  a {
+    background: url("../images/arrow.png") no-repeat scroll left center #2C2D35;
+    cursor: pointer;
+    width: 24px;
+    z-index: 99;
+	text-indent:-9999px;
+}
+#jt_jshopping_bestseller_slider .jt_prev_b a:hover, #jt_jshopping_bestseller_slider .jt_next_b  a:hover {background-color:#C03;}
+#jt_jshopping_bestseller_slider .jt_prev_b a {
+    float: left;
+}
+#jt_jshopping_bestseller_slider .jt_next_b a {
+    background-position: right center;
+    float: right;
+}
+#jt_jshopping_bestseller_slider .jt_prev_b_v, #jt_jshopping_bestseller_slider .jt_next_b_v {
+	position:relative;
+	float:left;
+	width:100%;
+	height:24px;
+	} 
+#jt_jshopping_bestseller_slider .jt_next_b_v { clear:both;}
+#jt_jshopping_bestseller_slider .jt_prev_b_v a, #jt_jshopping_bestseller_slider .jt_next_b_v a {
+	width:100%;
+	height:24px;
+	text-indent:-9999px;
+	cursor: pointer;
+	position:absolute;
+	}
+#jt_jshopping_bestseller_slider .jt_prev_b_v a {
+	background: url("../images/prev_v.png") no-repeat scroll center center #2C2D35;
+	top:0;
+	}
+#jt_jshopping_bestseller_slider .jt_next_b_v a {
+	background: url("../images/next_v.png") no-repeat scroll center center #2C2D35;
+	bottom:5px;
+	}
+#jt_jshopping_bestseller_slider .product_label {
+    margin-left: -5px;
+    margin-top: 5px;
+    position: absolute;
+}

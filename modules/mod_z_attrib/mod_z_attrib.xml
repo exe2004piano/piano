@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_z_attrib</name>
+
+    <files>
+        <filename module="mod_z_attrib">mod_z_attrib.php</filename>
+    </files>
+
+	<description>MOD_Z_ATTRIB_XML_DESCRIPTION</description>
+</extension>
