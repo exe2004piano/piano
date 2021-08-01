@@ -1,15 +1,7 @@
 
 
 
-<main class="b-section__main <?php if($addr=="/") echo 'is--frontpage'; ?>">
-	<div class="b-section__bunner">
-		<div class="container">
-			<jdoc:include type="modules" name="after-search-panel" />
-		</div>
-	</div>
-
-
-	
+<main class="b-section__main">
 	<?php if($addr=='/') { ?>
 
         <jdoc:include type="modules" name="top-slider" />
