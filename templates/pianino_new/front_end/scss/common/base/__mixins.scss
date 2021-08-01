@@ -1,0 +1,27 @@
+$lg-width: 1199px;
+$md-width: 991px;
+$sm-width: 767px;
+
+@mixin tabletLG {
+  @media only screen and (max-width: $lg-width) {
+    @content;
+  }
+}
+
+@mixin tabletMD {
+  @media only screen and (max-width: $lg-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $md-width) {
+    @content;
+  }
+}
+
+@mixin mobileSM {
+  @media only screen and (max-width: $sm-width) {
+    @content;
+  }
+}

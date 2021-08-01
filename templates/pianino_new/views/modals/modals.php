@@ -3,47 +3,41 @@
 <div class="pop-ups">
   <? /* Новые поп апы сделать */ ?>
 
-
   <? /* Аналоги */ ?>
-    <div class="pop__up" data-name-popup="analog" aria-labelledby="modal">
-        <div class="pop__up-row">
-            <div class="pop__up-title">
-                <p>Подобрать аналог</p>
-            </div>
-            <div class="pop__up-text">
-                <p>Подберем оптимальный аналог данной модели!</p>
-            </div>
+  <div class="pop__up" data-name-popup="analog" aria-labelledby="modal">
+      <div class="pop__up-row">
+          <div class="pop__up-title">
+              <p>Подобрать аналог</p>
+          </div>
+          <div class="pop__up-text">
+              <p>Подберем оптимальный аналог данной модели!</p>
+          </div>
 
-            <form action="/exe/send_form.php" method="post" class="pop__up-form bv-form" >
+          <form action="/exe/send_form.php" method="post" class="pop__up-form bv-form" >
 
-                <div class="bv-form__items">
-                    <input type="hidden" id="product_analog" value="" name="product_title" />
-                    <input type="hidden" id="product_analog_id" value="" name="pcmr_id" />
-                    <input type="hidden" name="form_type" value="form_analog" />
-                    <label class="bv-form__item">
-                        <input type="text" class="bv-form__input" placeholder="Имя" name="user_name" required>
-                    </label>
-                    <label class="bv-form__item">
-                        <input type="tel" class="bv-form__input" placeholder="Телефон" name="user_phone" required>
-                    </label>
-                </div>
+              <div class="bv-form__items">
+                  <input type="hidden" id="product_analog" value="" name="product_title" />
+                  <input type="hidden" id="product_analog_id" value="" name="pcmr_id" />
+                  <input type="hidden" name="form_type" value="form_analog" />
+                  <label class="bv-form__item">
+                      <input type="text" class="bv-form__input" placeholder="Имя" name="user_name" required>
+                  </label>
+                  <label class="bv-form__item">
+                      <input type="tel" class="bv-form__input" placeholder="Телефон" name="user_phone" required>
+                  </label>
+              </div>
 
-                <input type="submit" class="bv-btn bv-btn--third bv-form__submit" value="Подобрать"
-                       onclick="event_send('Kupit_v_1klik2', 'Kupitv1klik2'); retail_one_click();">
-            </form>
-
-
-            <div class="close" data-name-popup="fastOrder" aria-label="Close">
-                <span class="close__part" aria-hidden="true"></span>
-                <span class="close__part" aria-hidden="true"></span>
-            </div>
-        </div>
-    </div>
+              <input type="submit" class="bv-btn bv-btn--third bv-form__submit" value="Подобрать"
+                      onclick="event_send('Kupit_v_1klik2', 'Kupitv1klik2'); retail_one_click();">
+          </form>
 
 
-
-
-
+          <div class="close" data-name-popup="fastOrder" aria-label="Close">
+              <span class="close__part" aria-hidden="true"></span>
+              <span class="close__part" aria-hidden="true"></span>
+          </div>
+      </div>
+  </div>
 
   <? /* Заказать */ ?>
   <div class="pop__up" data-name-popup="toOrder" aria-labelledby="modal">
@@ -83,38 +77,27 @@
       </div>
     </div>
   </div>
+
   <? /* end. Новые поп апы сделать */ ?>
+  <a href="#" data-get-popup="thankspopup" id="thanks_btn"></a>
+  <div class="pop__up" data-name-popup="thankspopup" aria-labelledby="modal">
+      <div class="pop__up-row">
+          <div class="pop__up-text" >
+              <p>
+                  <img src="/templates/pianino_new/i/logo.svg" alt="" class="thanks_btn_img" />
+              </p>
 
-
-
-
-
-
-    <a href="#" data-get-popup="thankspopup" id="thanks_btn"></a>
-    <div class="pop__up" data-name-popup="thankspopup" aria-labelledby="modal">
-        <div class="pop__up-row">
-            <div class="pop__up-text" >
-                <p>
-                    <img src="/templates/pianino_new/i/logo.svg" alt="" class="thanks_btn_img" />
-                </p>
-
-                <p> Спасибо! Ваши данные отправлены нашим менеджерам.
-                    <br />
-                    С Вами свяжутся как можно быстрее
-                </p>
-            </div>
-            <div class="close" data-name-popup="thankspopup" aria-label="Close">
-                <span class="close__part" aria-hidden="true"></span>
-                <span class="close__part" aria-hidden="true"></span>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
+              <p> Спасибо! Ваши данные отправлены нашим менеджерам.
+                  <br />
+                  С Вами свяжутся как можно быстрее
+              </p>
+          </div>
+          <div class="close" data-name-popup="thankspopup" aria-label="Close">
+              <span class="close__part" aria-hidden="true"></span>
+              <span class="close__part" aria-hidden="true"></span>
+          </div>
+      </div>
+  </div>
 
   <? /* Оповестить */ ?>
   <div class="pop__up" data-name-popup="notify" aria-labelledby="modal">
@@ -160,19 +143,6 @@
   </div>
   <? /* end. Новые поп апы сделать */ ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   <? /* корзина */ ?>
   <div class="pop__up" data-name-popup="toCart" aria-labelledby="modalProducts">
     <div class="pop__up-row">
@@ -202,12 +172,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
 
   <? /* экспресс-доставка */ ?>
   <div class="pop__up" data-name-popup="expressDelivery" aria-labelledby="modalFeedback2">
@@ -252,15 +216,6 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
   <? /* Купить в 1 клик: */ ?>
   <div class="pop__up" data-name-popup="fastOrder" aria-labelledby="modalFeedback4">
     <div class="pop__up-row">
@@ -303,15 +258,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
 
   <? /* Рассрочка: */ ?>
   <div class="pop__up" data-name-popup="paymentInParts" aria-labelledby="modalFeedback5">
@@ -367,15 +313,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
 
   <? /* Нашли дешевле: */ ?>
   <div class="pop__up pop__up--second" data-name-popup="cheepOrder" aria-labelledby="modalFeedback3">
@@ -437,15 +374,6 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
   <? /* Обратный звонок: */ ?>
   <div class="pop__up pop__up--second" data-name-popup="call" aria-labelledby="modalFeedback3">
     <div class="pop__up-row">
@@ -477,11 +405,6 @@
   </div>
   
 </div>
-
-
-
-
-
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="pswp__bg"></div>
@@ -517,7 +440,6 @@
     </div>
   </div>
 </div>
-
 
 <? // End New popups ?>
 

@@ -392,7 +392,7 @@ if($items = $db->loadObjectList())
     }
     else
     {
-        $text .= '<ul class="form-popup__list">';
+        $text .= '<div class="search-result"> <style>.search-result{position: absolute;top: 100%;left: 0;right: 44px;z-index: 1;background-color: #fff;border: 1px solid #ccc;padding: 20px;margin-top: 8px;}.search-result__links{margin-left: -4px;margin-bottom: 10px;}.search-result__links span{padding-left: 4px;font-weight: 700;}.search-result__links span a{font-weight: 400;color: #337ab7;padding: 4px 0;}.search-result__links span a:hover{color: #cc2929;}.search-result__list ul{padding: 15px 0 0;}.search-result__list{min-height: 320px;max-height: 320px;overflow: hidden auto;scrollbar-color: #dfdfdf rgba(223, 223, 223, 0.5);scrollbar-width: thin !important;margin: 0 -20px;}.search-result__list::-webkit-scrollbar{width: 7px;}.search-result__list::-webkit-scrollbar-thumb{background-color: #dfdfdf;}.search-result__list::-webkit-scrollbar{background-color: rgba(223, 223, 223, 0.5);}.search-result__list li:not(:last-of-type){border-bottom: 1px solid #ccc;}.search-result__list a{padding: 15px 20px;width: 100%;display: flex;align-items: center;}.search-result__list a img{flex: 0 0 auto;margin-right: 20px;color: transparent;}.search-result__list a:hover{background-color: #e8f6ff;}.search-result__wrap{padding-right: 20px;margin-right: auto;}.search-result__wrap span{display: block;font-weight: 700;font-size: 18px;color: #3f454b;margin-top: 10px;}.search-result__wrap p{word-break: break-word;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;}.search-result__status{font-size: 14px;flex: 0 0 auto;padding: 4px 12px;border-radius: 5px;}.is--inStock{color: #26750a;border: 1px solid #26750a;}.is--none{color: #831313; border: 1px solid #831313;}.is--order{color: #4f4b4b; border: 1px solid #4f4b4b;}.is--notify{color: #e6af1b; border: 1px solid #e6af1b;}.search-result__bottom{margin: 0 -20px -20px; padding: 20px; background-color: #ccc; display: flex; align-items: center; flex-wrap: wrap;}.search-result__bottom > span{margin-right: auto; padding: 10px 15px 10px 0;}</style>';
         $w_like = "";
         $w_like_w = "";
 
@@ -430,16 +430,16 @@ if($items = $db->loadObjectList())
             $db->setQuery($w_q);
             if($w_like_all = $db->loadObjectList())
             {
-                $text.= "<li class=\"form-popup__top\" > <span>Найдено в категориях:</span> <div class=\"form-popup__links\">";
+                $text.= "<div class='search-result__links'> <span>Найдено в категориях:</span> <span>";
                 
                 foreach($w_like_all AS $w)
                 {
                     $title = trim($q->c3_title . " " . $w->c2_title . " " . $w->c1_title . " " . $w->title);
                     $link = SEFLink('index.php?option=com_jshopping&controller=category&task=view&category_id='.$w->category_id);
                     $link = str_replace('/components/com_jshopping', '', $link);
-                    $text .= "<a href='{$link}'>{$title}</a>";
+                    $text .= "<span><a href='{$link}'>{$title}</a></span>";
                 }
-                $text .= "</div></li>";
+                $text .= "</span></div> <div class='search-result__list'><ul>";
             }
         }
 
@@ -494,38 +494,28 @@ if($items = $db->loadObjectList())
             $k++;
 
             $text .= "
-<li class=\"form-popup__item\">
-    <a href=\"{$link}\" class=\"form-popup__link\">
-    <div class=\"form-popup__wrap\">
-        <div class=\"form-popup__img\">
-            <img src=\"/components/com_jshopping/files/img_products/thumb_{$product->image}\" alt=\"{$product->title}\">
+<li>
+    <a href=\"{$link}\">
+        <img src=\"/components/com_jshopping/files/img_products/thumb_{$product->image}\" alt=\"{$product->title}\" width='80' height='80' class='is--cover'>
+
+        <div class=\"search-result__wrap\">
+            <p>{$product->title}</p>
+            <span>{$price}</span>
         </div>
 
-        <div class=\"form-popup__contains\">
-            <div class=\"form-popup__title\">
-                <h4>{$product->title}</h4>
-            </div>
-            <span class=\"form-popup__text\">{$price}</span>
-           
-        </div>
-         <span class=\"form-popup__status is--{$sklad_class}\">{$sklad}</span>
-    </div>
-        
-
+         <span class=\"search-result__status is--{$sklad_class}\">{$sklad}</span>
     </a>
 </li>
 ";
         }
 
-        $text .= '</ul>';
+        $text .= '</ul></div>';
 
         $text .=
-            "<div class=\"form-popup__footer\" >
-                <span>Всего найдено <span>{$num->num}</span> товаров</span>
-                <div class=\"form-popup__btn\">
-                    <a href=\"/search?word={$_GET['word']}\" class=\"bv-btn\"><span class=\"bv-btn__text\">Посмотреть</span></a>
-                </div>
-            </div>";
+            "<div class=\"search-result__bottom\" >
+                <span>Всего найдено <strong>{$num->num}</strong> товаров</span>
+                <a href=\"/search?word={$_GET['word']}\" class=\"btn\">Посмотреть</a>
+            </div> </div>";
 
 
         echo $text;
